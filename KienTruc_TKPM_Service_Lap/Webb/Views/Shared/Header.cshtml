@@ -1,0 +1,80 @@
+﻿@using Microsoft.Extensions.Options;
+@using Lap1.Web.Configuration;
+@inject IOptions<ApplicationSettings> _configurationSettings
+
+<nav class="nav-extended #90caf9 blue lighten-3 ">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo ">
+            <img src="~/icon/technology.png" style="height:50px;width:80px;" />TECHNOLOGY SERVICE
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger #fafafa grey lighten-5 "><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            @*<li><a href="sass.html">GIỎ HÀNG</a></li>*@
+            <li><a href="~/Identity/Account/Login">ĐĂNG NHẬP</a></li>
+            @*<li><a href="collapsible.html">ĐĂNG KÝ</a></li>*@
+        </ul>
+    </div>
+
+    <form>
+        <div class="input-field #1565c0 blue darken-3">
+            <input id="search" type="search" placeholder="                Dịch vụ sửa chữa" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+        </div>
+    </form>
+
+    <div class="nav-content fixed-top ">
+        <ul class="tabs tabs-transparent">
+            @*<li class="tab"><a href="#test1">DANH MỤC SẢN PHẨM</a></li>*@
+            <li class="tab #1565c0 blue darken-3"><a class="active" href="~/Home/Index">TRANG CHỦ </a></li>
+            <li class="tab  #1565c0 blue darken-3"><a href="#test3">DỊCH VỤ</a></li>
+            <li class="tab #1565c0 blue darken-3"><a href="#test4">TIN TỨC CÔNG NGHỆ</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="~/Identity/Account/Login">ĐĂNG NHẬP</a></li>
+    @*<li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>*@
+</ul>
+@*<nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img src="~/icon/285807_auto_vehicle_car_automobile_convertible_icon.png" style="height:90px;width:100px;" />
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="~/Identity/Account/Login">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="~/Identity/Account/Login">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>*@
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center black-text text-lighten-2">@_configurationSettings.Value.ApplicationTitle</h1>
+            <div class="row center">
+                <h5 class="header col s12 darken-1">Where Quality Meets Safety</h5>
+            </div>
+            <div class="row center">
+                <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light #1565c0 blue darken-3 lighten-1">Get Started</a>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax">  <img src="~/image/background_tech1.jpg" /></div>
+
+
+</div>
